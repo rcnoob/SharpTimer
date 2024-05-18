@@ -24,10 +24,9 @@ namespace SharpTimer
     public partial class SharpTimer
     {
         public string compileTimeStamp = new DateTime(CompileTimeStamp.CompileTime, DateTimeKind.Utc).ToString();
-
         public override string ModuleName => "SharpTimer";
-        public override string ModuleVersion => $"0.2.6 - 5/13/2024 11:05:46 PM";
-        public override string ModuleAuthor => "dea https://github.com/deafps/";
+        public override string ModuleVersion => $"0.2.7 - 5/18/2024";
+        public override string ModuleAuthor => "dea https://github.com/deafps/ & rc https://github.com/rcnoob/";
         public override string ModuleDescription => "A CS2 Timer Plugin";
 
         private Dictionary<int, PlayerTimerInfo> playerTimers = [];
@@ -142,7 +141,7 @@ namespace SharpTimer
         public bool forcePlayerSpeedEnabled = false;
         public float forcedPlayerSpeed = 250;
 
-        public int bhopBlockTime = 64;
+        public int bhopBlockTime = 16;
 
         public bool jumpStatsEnabled = false;
         public float jumpStatsMinDist = 175;
@@ -166,7 +165,7 @@ namespace SharpTimer
         public bool discordWebhookEnabled = false;
         public string discordWebhookBotName = "SharpTimer";
         public string discordWebhookPFPUrl = "https://cdn.discordapp.com/icons/1196646791450472488/634963a8207fdb1b30bf909d31f05e57.webp";
-        public string discordWebhookImageRepoURL = "https://raw.githubusercontent.com/deafps/SharpTimerDiscordWebhookMapPics/main/images/";
+        public string discordWebhookImageRepoURL = "https://raw.githubusercontent.com/rcnoob/SharpTimerDiscordWebhookMapPics/main/images/";
         public string? discordPBWebhookUrl;
         public string? discordSRWebhookUrl;
         public string? discordPBBonusWebhookUrl;
@@ -178,36 +177,36 @@ namespace SharpTimer
         public bool discordWebhookPrintPB = false;
 
 
-        public string? remoteBhopDataSource = "https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/bhop_.json";
-        public string? remoteKZDataSource = "https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/kz_.json";
-        public string? remoteSurfDataSource = "https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/surf_.json";
-        public string? testerPersonalGifsSource = "https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/tester_bling.json";
+        public string? remoteBhopDataSource = "https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/bhop_.json";
+        public string? remoteKZDataSource = "https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/kz_.json";
+        public string? remoteSurfDataSource = "https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/surf_.json";
+        public string? testerPersonalGifsSource = "https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/tester_bling.json";
 
-        public static string god3Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/god.gif' class=''>";
-        public static string god2Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/god.gif' class=''>";
-        public static string god1Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/god.gif' class=''>";
-        public static string royalty3Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/royal3.png' class=''>";
-        public static string royalty2Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/royal2.png' class=''>";
-        public static string royalty1Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/royal1.png' class=''>";
-        public static string legend3Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/legend3.png' class=''>";
-        public static string legend2Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/legend2.png' class=''>";
-        public static string legend1Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/legend1.png' class=''>";
-        public static string master3Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/master3.png' class=''>";
-        public static string master2Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/master2.png' class=''>";
-        public static string master1Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/master1.png' class=''>";
-        public static string diamond3Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/dia3.png' class=''>";
-        public static string diamond2Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/dia2.png' class=''>";
-        public static string diamond1Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/dia1.png' class=''>";
-        public static string platinum3Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/plat3.png' class=''>";
-        public static string platinum2Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/plat2.png' class=''>";
-        public static string platinum1Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/plat1.png' class=''>";
-        public static string gold3Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/gold3.png' class=''>";
-        public static string gold2Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/gold2.png' class=''>";
-        public static string gold1Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/gold1.png' class=''>";
-        public static string silver3Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/silver3.png' class=''>";
-        public static string silver2Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/silver2.png' class=''>";
-        public static string silver1Icon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/silver1.png' class=''>";
-        public static string unrankedIcon = "<img src='https://raw.githubusercontent.com/deafps/SharpTimer/main/remote_data/rank_icons/unranked.png' class=''>";
+        public static string god3Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/god.gif' class=''>";
+        public static string god2Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/god.gif' class=''>";
+        public static string god1Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/god.gif' class=''>";
+        public static string royalty3Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/royal3.png' class=''>";
+        public static string royalty2Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/royal2.png' class=''>";
+        public static string royalty1Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/royal1.png' class=''>";
+        public static string legend3Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/legend3.png' class=''>";
+        public static string legend2Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/legend2.png' class=''>";
+        public static string legend1Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/legend1.png' class=''>";
+        public static string master3Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/master3.png' class=''>";
+        public static string master2Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/master2.png' class=''>";
+        public static string master1Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/master1.png' class=''>";
+        public static string diamond3Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/dia3.png' class=''>";
+        public static string diamond2Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/dia2.png' class=''>";
+        public static string diamond1Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/dia1.png' class=''>";
+        public static string platinum3Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/plat3.png' class=''>";
+        public static string platinum2Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/plat2.png' class=''>";
+        public static string platinum1Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/plat1.png' class=''>";
+        public static string gold3Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/gold3.png' class=''>";
+        public static string gold2Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/gold2.png' class=''>";
+        public static string gold1Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/gold1.png' class=''>";
+        public static string silver3Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/silver3.png' class=''>";
+        public static string silver2Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/silver2.png' class=''>";
+        public static string silver1Icon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/silver1.png' class=''>";
+        public static string unrankedIcon = "<img src='https://raw.githubusercontent.com/rcnoob/SharpTimer/main/remote_data/rank_icons/unranked.png' class=''>";
 
 
         public struct WeaponSpeedStats

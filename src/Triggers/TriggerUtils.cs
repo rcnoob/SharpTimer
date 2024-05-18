@@ -267,6 +267,7 @@ namespace SharpTimer
             return null;
         }
 
+
         private void FindStageTriggers()
         {
             stageTriggers.Clear();

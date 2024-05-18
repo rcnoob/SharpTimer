@@ -1078,6 +1078,7 @@ namespace SharpTimer
                 if (!playerTimers[player!.Slot].IsTimerBlocked)
                 {
                     playerCheckpoints.Remove(player.Slot);
+                    
                 }
 
                 if (jumpStatsEnabled) InvalidateJS(player.Slot);
@@ -1189,6 +1190,7 @@ namespace SharpTimer
                 SharpTimerError($"Exception in RestartCurrentStage: {ex.Message}");
             }
         }
+
 
         [ConsoleCommand("css_timer", "Stops your timer")]
         [CommandHelper(whoCanExecute: CommandUsage.CLIENT_ONLY)]
